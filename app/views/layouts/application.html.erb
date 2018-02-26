@@ -14,13 +14,15 @@
 
         <% if logged_in? %>
           <%= link_to "Logout", logout_path, {method: "DELETE"} %>
+          <%= link_to current_user.name, user_path(current_user.id) %>
         <% else %>
           <%= link_to "Login", new_session_path %>
         <% end %>
+        <%= link_to "Home", "/" %>
 
       <%= yield %>
       <%= params %>
-      <%= current_user[:id] %>
+  
     </div>
   </body>
 </html>

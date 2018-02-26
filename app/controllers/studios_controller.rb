@@ -4,6 +4,8 @@ class StudiosController < ApplicationController
   end
 
   def show
+    @studio = Studio.find(params[:id])
+    @user = User.find(@studio.user_id)
   end
 
   def new

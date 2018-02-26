@@ -1,2 +1,5 @@
-<h1>Studios#show</h1>
-<p>Find me in app/views/studios/show.html.erb</p>
+<h1><%= @studio.name %></h1>
+<%= image_tag(@studio.image_url, :alt => "studio art") %>
+<h2><%= link_to @studio.website %></h2>
+<h3><%= @studio.phone %></h3>
+<p><%= @studio.address %></p>
