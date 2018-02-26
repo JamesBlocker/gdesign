@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'users#index'
+  root 'studios#index'
   resources :users
   resources :studios
 
