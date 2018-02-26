@@ -21,9 +21,18 @@ class StudiosController < ApplicationController
   end
 
   def edit
+    @studio = Studio.find(params[:id])
   end
 
   def update
+    @studio = Studio.find(params[:id])
+    @studio.name = params[:studio][:name]
+    @studio.address = params[:studio][:address]
+    @studio.phone = params[:studio][:phone]
+    @studio.website = params[:studio][:website]
+    @studio.image_url = params[:studio][:image_url]
+    @studio.save
+    redirect_to studio_path(@studio.id)
   end
 
   def destroy
