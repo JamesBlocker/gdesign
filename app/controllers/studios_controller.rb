@@ -15,7 +15,7 @@ class StudiosController < ApplicationController
   def create
     @studio = current_user.studios.new(studio_params)
     @studio.save
-    redirect_to "/"
+    redirect_to studio_path(@studio.id)
   end
 
   def edit
