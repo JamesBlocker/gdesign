@@ -37,8 +37,8 @@ class StudiosController < ApplicationController
 
   def destroy
     @studio = Studio.find(params[:id])
-    @dweed.destroy
-    redirect_to "/"
+    @studio.destroy
+    redirect_to user_path(current_user.id)
   end
   private
   def studio_params
