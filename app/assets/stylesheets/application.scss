@@ -8,10 +8,14 @@ html, body {
     height: 100%;
 }
 
+body {
+    background-color: darkgray;
+}
+
 .fill {
     background-color: white;
     min-height: 100%;
-    padding-bottom: 50px;
+    // padding: 50px;
 }
 
 .user_studios {
@@ -24,6 +28,8 @@ html, body {
 
 #nav {
     background-color: rgb(255, 105, 79);
+    padding: 10px;
+
 }
 
 #nav a {
@@ -33,6 +39,7 @@ html, body {
 
 a {
     color:rgb(52, 120, 246);
+    font-family: 'Merriweather', serif;
 }
 
 .studio_show img {
@@ -48,7 +55,6 @@ a {
 
 .crop {
     height: 250px;
-    // width: 200px;
     overflow: hidden;
 }
 
@@ -57,10 +63,16 @@ a {
     width: 100%;
 }
 
-#home {
+.right {
     float: right;
+    display: inline-block;
     padding-right: 10px;
 }
+
+.left {
+    padding-left: 10px;
+}
+
 
 // colors
 .blue_bg {
@@ -105,4 +117,19 @@ a {
 
 .white {
     color: white;
+}
+
+// Fonts
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    font-family: 'Merriweather', serif;
 }

@@ -3,22 +3,21 @@
   <head>
     <title>Gdesign</title>
     <%= csrf_meta_tags %>
-
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:400,800" rel="stylesheet">  </head>
 
-  <body class="softblue_bg">
+  <body>
+   <%= render '/partials/flash' %>
     <div class="container fill">
       <div id="nav">
+        <%= link_to "Home", "/", {class: "green left"} %>
         <% if logged_in? %>
-          <%= link_to "Logout", logout_path, {method: "DELETE", class: "btn btn-sm"} %>
-          <%= link_to current_user.name, user_path(current_user.id), {class: "btn blue_bg btn-sm"} %>
+          <%= link_to "Logout", logout_path, {method: "DELETE", class: "btn btn-sm right"} %>
+          <%= link_to current_user.name, user_path(current_user.id), {class: "btn blue_bg btn-sm left"} %>
         <% else %>
           <%= link_to "Login", new_session_path, {class: "btn btn-primary btn-sm"} %>
         <% end %>
-        <div id="home"><%= link_to "Home", "/", {class: "green"} %></div>
       </div>
 
       <%= yield %>

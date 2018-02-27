@@ -1,4 +1,4 @@
-<h1>Add Studio</h1>
+<!-- <h1>Add Studio</h1>
 <%= form_for @studio do |f| %>
 <%= f.text_field :name, placeholder: "Studio Name" %>
 <%= f.text_field :address, placeholder: "Physical Address" %>
@@ -6,8 +6,37 @@
 <%= f.text_field :website, placeholder: "Website Address" %>
 <%= f.text_field :image_url, placeholder: "Image URL" %>
 <%= f.submit "Submit Studio" %>
-<% end %>
+<% end %> -->
 
-
+<div class="row">
+        <div class="col-md-6 offset-md-3">
+          <h1>Add Studio</h1>
+          <%= form_for @studio do |f| %>
+            <div class="form-group">
+              <label>Studio Name</label>
+              <%= f.text_field :name, class: "form-control", placeholder: "Jack Smith" %>
+            </div>
+            <div class="form-group">
+              <label>Address</label>
+              <%= f.text_field :address, class: "form-control", placeholder: "Santa Monica, CA" %>
+            </div>
+            <div class="form-group">
+              <label>Phone</label>
+              <%= f.text_field :phone, class: "form-control", placeholder: "(818) 555 - 1234" %>
+            </div>
+            <div class="form-group">
+              <label>Website</label>
+              <%= f.text_field :website, class: "form-control", placeholder: "http://design.com" %>
+            </div>
+            <div class="form-group">
+                <label>Image URL</label>
+                <%= f.text_field :image_url, class: "form-control", placeholder: "http://website/cutepuppy.jpg" %>
+            </div>
+            <%= f.submit "Create Studio", class: "btn btn-outline-primary" %>
+          <% end %>
+        </div>
+      </div>
+      
+      
 
 
