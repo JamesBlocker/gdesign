@@ -1,7 +1,23 @@
 <h1>Studios#index</h1>
 
-<ul>
-    <% @bananas.each do |s|%>
-    <li><%= link_to s.name, studio_path(s.id) %></li>
-    <% end %>
-</ul>
+
+<% @studios.each_slice(4) do |row|%>
+    <div class="row">
+        <% row.each do |s| %>
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="crop">
+                        <img class="card-img-top" src="<%= s.image_url %>" alt="Card image cap">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><%= s.name %></h5>
+                        <!-- <p class="card-text"><%= s.website %></p> -->
+                        <!-- <p><%= link_to(s.website, s.website) %></p> -->
+                        <%= link_to("Show", "/studios/#{s.id}", class: "btn btn-outline-secondary btn-sm")%>
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+<% end %>
+

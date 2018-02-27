@@ -1,5 +1,8 @@
 <h1><%= @studio.name %></h1>
-<%= image_tag(@studio.image_url, :alt => "studio art") %>
-<h2><%= link_to @studio.website %></h2>
-<h3><%= @studio.phone %></h3>
-<p><%= @studio.address %></p>
+<div class="studio_show">
+    <%= image_tag(@studio.image_url, :alt => "studio art") %>
+    <h5><%= link_to @studio.website %></h5>
+    <h6><%= number_to_phone(@studio.phone, area_code: true) %></h6>
+    
+    <p><%= @studio.address %></p>
+</div>

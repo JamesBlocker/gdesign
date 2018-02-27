@@ -1,0 +1,100 @@
+@import "bootstrap";
+
+// body {
+//     background-color: black;
+// }
+
+html, body {
+    height: 100%;
+}
+
+.fill {
+    background-color: white;
+    min-height: 100%;
+    padding-bottom: 50px;
+}
+
+#nav {
+    background-color: rgb(255, 105, 79);
+}
+
+#nav a {
+    font-weight: bold;
+    color: white;
+}
+
+a {
+    color:rgb(52, 120, 246);
+}
+
+.studio_show img {
+    min-height: 300px;
+    max-height: 300px;
+    margin: 0 auto;
+}
+
+.studio_show {
+    width: 50%;
+    
+}
+
+.crop {
+    height: 250px;
+    // width: 200px;
+    overflow: hidden;
+}
+
+.crop img {
+    height: auto;
+    width: 100%;
+}
+
+#home {
+    float: right;
+    padding-right: 10px;
+}
+
+// colors
+.blue_bg {
+    background-color: rgb(52, 120, 246);
+}
+
+.blue {
+    color: rgb(52, 120, 246);
+}
+
+.softblue_bg {
+    background-color: rgb(54, 124, 255);
+}
+
+.softblue {
+    color: rgb(54, 124, 255);
+}
+
+.orange_bg {
+    background-color: rgb(255, 105, 79);
+}
+
+.orange {
+    color: rgb(255, 105, 79);
+}
+
+.green_bg {
+    background-color: rgb(149, 204, 23);
+}
+
+.green {
+    color: rgb(149, 204, 23);
+}
+
+.hunter_bg {
+    background-color: rgb(133, 178, 29);
+}
+
+.hunt {
+    color: rgb(133, 178, 29);
+}
+
+.white {
+    color: white;
+}
