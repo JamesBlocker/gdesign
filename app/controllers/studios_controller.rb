@@ -2,7 +2,7 @@ class StudiosController < ApplicationController
   before_action :verify_studio_user, only: [:edit, :update, :destroy]
   
   def index
-    @studios = Studio.all
+    @bananas = Studio.all
   end
 
   def show
