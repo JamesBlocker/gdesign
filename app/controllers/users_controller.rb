@@ -22,12 +22,19 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = current_user
   end
 
   def update
+    @user = current_user
+    @user.update(user_params)
+    redirect_to user_path
   end
 
   def destroy
+    session[:user_id] = nil
+    current_user.destroy
+    redirect_to new_session_path
   end
 
   private
