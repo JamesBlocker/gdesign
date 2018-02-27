@@ -1,11 +1,13 @@
 <h1><%= @user.name %></h1>
 
 <% @user.studios.each do |s| %>
-<li><%= link_to s.name, studio_path(s.id) %> - 
-    <%= link_to "Update", edit_studio_path(s.id)%> - 
-    <%= link_to "Delete", studio_path(s.id), {method: 'delete', data: {confirm: "Are you sure?"} }  %></li>
-<% end %>
+    <li class="user_studios">
+            <%= link_to s.name, studio_path(s.id), {class: "u_studio_width"} %>
+        <%= link_to "Update", edit_studio_path(s.id), class: "btn btn-outline-secondary btn-sm"%>
+        <%= link_to "Delete", studio_path(s.id), {method: 'delete', data: {confirm: "Are you sure?" }, class: "btn btn-outline-secondary btn-sm" }  %>
+    </li>
+    <% end %>
 
-<%= link_to "Add Studio", new_studio_path %>
-<br>
-<%= link_to "Edit Profile", edit_user_path %>
+<%= link_to "Add Studio", new_studio_path, class: "btn hunter_bg white btn-sm"%>
+<%= link_to "Edit Profile", edit_user_path, class: "btn orange_bg white btn-sm" %>
+
