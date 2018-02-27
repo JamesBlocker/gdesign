@@ -20,7 +20,7 @@
               <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Confirm Password" %>
             </div>
             <%= f.submit "Edit Account", class: "btn btn-primary" %>
-            <%= link_to  "Delete Profile", user_path, class: "btn btn-danger", {method: 'delete', data: {confirm: "Are you sure?"} } %>
+            <%= link_to  "Delete Profile", user_path(current_user.id), {class: "btn btn-danger", method: 'delete', data: {confirm: "Are you sure?"} } %>
           <% end %>
         </div>
       </div>
