@@ -10,6 +10,7 @@
   <body>
    <%= render '/partials/flash' %>
     <div class="container fill">
+      <div class="content">
       <div id="nav">
         <%= link_to "Home", "/", {class: "green left"} %>
         <% if logged_in? %>
@@ -21,7 +22,8 @@
       </div>
 
       <%= yield %>
-  
+    </div>
+      <%= render '/partials/footer' %>
     </div>
   </body>
 </html>
