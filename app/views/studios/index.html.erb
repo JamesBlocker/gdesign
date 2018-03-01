@@ -1,7 +1,13 @@
-<h1>Design Studios</h1>
-<p>Great graphic design is just a click away!</p>
-
-
+<div class="header">
+    <h1 id="big_header">GDesign</h1>
+    <h2>Connect with the artist you need</h2>
+    <h5><em>Great graphic design is just a click away!</em></h5>
+    <p class="bottom">Easy to search. Easy to sign up.</p>
+</div>
+<figure>
+    <%= image_tag("https://www.digitalplatforms.co.za/wp-content/uploads/2016/05/Graphic-Designer.jpg") %>
+</figure>
+<hr>
 <% @studios.each_slice(4) do |row|%>
     <div class="row">
         <% row.each do |s| %>
